@@ -11,14 +11,14 @@ struct home_address
     long int index_number;
 };
 
-void print_structur(home_address& c, home_address& s, home_address& h, home_address& f, home_address& i)
+void print_structur(home_address& a)
 {
     std::cout << "\n\n\tВаш адрес:\n";
-    std::cout << "\nГород: "<<c.city_name;
-    std::cout << "\nУлица: " << s.street_name;
-    std::cout << "\nНомер дома: " << h.house_number;
-    std::cout << "\nНомер квартиры: " << f.flat_number;
-    std::cout << "\nИндекс: " << i.index_number << "\n";
+    std::cout << "\nГород: "<<a.city_name;
+    std::cout << "\nУлица: " << a.street_name;
+    std::cout << "\nНомер дома: " << a.house_number;
+    std::cout << "\nНомер квартиры: " << a.flat_number;
+    std::cout << "\nИндекс: " << a.index_number << "\n";
 }
 
 int main()
@@ -50,6 +50,6 @@ int main()
     address.flat_number = flat;
     address.index_number = index;
 
-    print_structur(address, address, address, address, address);
+    print_structur(address);
 
 }

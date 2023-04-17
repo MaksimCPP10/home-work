@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <windows.h>
 
 struct bank_account
 {
@@ -15,6 +16,9 @@ void change_balance(bank_account& m, double new_balance)
 int main()
 {
     setlocale(0, "");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
     std::cout << "\n\t\tЗадача 2. Счета.\n";
 
     long int account;

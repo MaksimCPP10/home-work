@@ -36,11 +36,9 @@ int main()
     SetConsoleOutputCP(1251);
     std::cout << "\n\t\tЗадача 2. Счётчик.\n";
 
-    int custom_counter;
+    int custom_counter=1;
     std::string answer;
     char choice;
-
-    Counter count;
 
     std::cout << "\nВы хотите указать начальное значение счётчика? Введите да или нет: ";
     std::cin >> answer;
@@ -48,13 +46,10 @@ int main()
     {
         std::cout << "\nВведите начальное значение счётчика: ";
         std::cin >> custom_counter;
-        Counter (custom_counter);
     }
-    else
-    {
-        Counter (1);
-    };
-   
+        
+    Counter count(custom_counter);
+
     do
     {
         std::cout << "\nВведите команду ('+', '-', '=' или 'x' - для завершения): ";

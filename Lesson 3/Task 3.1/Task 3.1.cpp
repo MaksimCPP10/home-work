@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <windows.h>
 
 class Calculator
 {
@@ -39,32 +40,30 @@ public:
     }
     bool set_num1(double num1)
     {
-        if (num1 == 0) {
-            std::cout << "\n\"0\" - является недопустимым значением!\n";
-            return false;
-        }else
-        {
+        if (num1!=0) {
             this->num1 = num1;
-            return true;
-        };
+            return num1;
+        }
     }
     bool set_num2(double num2)
     {
-        if (num2==0) {
-            std::cout << "\n\"0\" - является недопустимым значением!\n";
-            return false;
-        }
-        else
-        {
+        if (num2!=0) {
             this->num2 = num2;
-            return true;
-        };
+            return num2;
+        }
     }
 };
+
+void Error(int num)
+{
+    if (!num){std::cout<< "\n\"0\" - является недопустимым значением!\n";}
+}
 
 int main()
 {
     setlocale(0, "");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     std::cout << "\n\t\tЗадача 1. Калькулятор двух чисел.\n";
     
     double num1, num2;
@@ -80,14 +79,16 @@ int main()
         std::cout << "\nВведите 1-ое число: ";
         std::cin >> num1;
         result.set_num1(num1);
-    } while (!result.set_num1(num1));
+        Error(num1);
+    } while (!num1);
 
     do
     {
         std::cout << "\nВведите 2-ое число: ";
         std::cin >> num2;
         result.set_num2(num2);
-    } while (!result.set_num2(num2));
+        Error(num2);
+    } while (!num2);
 
     std::cout << result.add();
 
@@ -101,9 +102,11 @@ int main()
 
     std::cout << result.divide_2_1();
 
-    std::cout << "\n\nЖелаете ввести ещё одну пару чисел для вычисления? (y/n)";
+    std::cout << "\n\nЖелаете ввести ещё одну пару чисел для вычисления? (да/нет): ";
     std::cin >> answer;
 
-    } while (answer !="n" );
+    } while (answer !="нет");
+
+    std::cout << "\nВсего доброго! До свидания!\n";
 
 }

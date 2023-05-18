@@ -15,7 +15,7 @@ Rhomb::Rhomb(int a, int b, int c, int d, int A, int B, int C, int D)
         side_a = a;
         side_b = b;
         side_c = c;
-        side_d = ad;
+        side_d = d;
 
         angle_A = A;
         angle_B = B;

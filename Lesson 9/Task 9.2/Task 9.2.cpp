@@ -84,8 +84,8 @@ public:
 			{
 				gcd = i; break;
 			}
-			return gcd;
 		}
+		return gcd;
 	}
 	void Print()
 	{

@@ -135,7 +135,7 @@ int main()
 
 	std::cout << "\n\n"; fr1.Print(); std::cout << "-- * "; fr2.Print(); std::cout << " = ";
 
-	fr1--;
+	fr1=fr1--;
 	Mult = fr1 * fr2; Mult.Print();
 
 	std::cout << "\n\nЗначение дроби \"1\" = "; fr1.Print(); std::cout << "\n\n";

@@ -15,27 +15,27 @@ public:
 
 	bool operator ==(const Fraction& other)
 	{
-		return numerator_ == other.numerator_ && denominator_ == other.denominator_;
+		return ((numerator_ * other.denominator_) == (other.numerator_ * denominator_));
 	}
 	bool operator !=(const Fraction& other)
 	{
-		return !(numerator_ == other.numerator_ && denominator_ == other.denominator_);
+		return !((numerator_ * other.denominator_) == (other.numerator_ * denominator_));
 	}
 	bool operator <(const Fraction & other)
 	{
-		return numerator_ < other.numerator_ && denominator_ < other.denominator_;
+		return ((numerator_ * other.denominator_) < (other.numerator_ * denominator_));
 	}
 	bool operator >(const Fraction& other)
 	{
-		return !(numerator_ < other.numerator_&& denominator_ < other.denominator_);
+		return !((numerator_ * other.denominator_) < (other.numerator_ * denominator_));
 	}
 	bool operator <=(const Fraction& other)
 	{
-		return numerator_ <= other.numerator_&& denominator_ <= other.denominator_;
+		return ((numerator_ * other.denominator_) <= (other.numerator_ * denominator_));
 	}
 	bool operator >=(const Fraction& other)
 	{
-		return !(numerator_ <= other.numerator_ && denominator_ <= other.denominator_);
+		return !((numerator_ * other.denominator_) <= (other.numerator_ * denominator_));
 	}
 };
 int main()

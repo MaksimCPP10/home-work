@@ -5,7 +5,7 @@ class Fraction
 private:
 	int numerator_;
 	int denominator_;
-	int gcd=1;
+	int GCD=1;
 
 public:
 	Fraction()
@@ -37,9 +37,9 @@ public:
 		Fraction temp;
 		temp.numerator_ = numerator_ * other.numerator_;
 		temp.denominator_ = denominator_ * other.denominator_;
-		this->gcd = greatest_common_divisor(temp.numerator_, temp.denominator_);
-		temp.numerator_ = temp.numerator_ / gcd;
-		temp.denominator_ = temp.denominator_ / gcd;
+		this->GCD = greatest_common_divisor(temp.numerator_, temp.denominator_);
+		temp.numerator_ = temp.numerator_ / GCD;
+		temp.denominator_ = temp.denominator_ / GCD;
 		return temp;
 	}
 	Fraction operator /(const Fraction& other)
@@ -82,10 +82,10 @@ public:
 			
 			if (numerator % i == 0 && denominator % i == 0)
 			{
-				gcd = i; break;
+				GCD = i; break;
 			}
 		}
-		return gcd;
+		return GCD;
 	}
 	void Print()
 	{

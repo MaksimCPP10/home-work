@@ -1,0 +1,3 @@
+C:/Users/Максим/Desktop/HomeWork/Lesson 10/Task 10.2/out/build/x64-Debug/CMakeFiles/Figures_CMake.dir
+C:/Users/Максим/Desktop/HomeWork/Lesson 10/Task 10.2/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Максим/Desktop/HomeWork/Lesson 10/Task 10.2/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

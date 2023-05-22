@@ -1,0 +1,5 @@
+# ninja log v5
+7	455	7064844666921284	build.ninja	8a903df3caf13e73
+79	770	7064844666921284	build.ninja	8a903df3caf13e73
+29	1587	7064844685826243	CMakeFiles/my_first_cmake_project.dir/my_first_cmake_project.cpp.obj	6b2d772222ec184f
+1588	2030	7064844690044700	my_first_cmake_project.exe	3a7ec67fff23299f

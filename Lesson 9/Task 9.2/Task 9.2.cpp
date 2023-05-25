@@ -57,8 +57,9 @@ public:
 	}
 	Fraction& operator ++(int value)
 	{
-		Fraction temp(*this);
-		temp = ++(*this);
+		Fraction temp=*this;
+		temp.numerator_ = numerator_ + denominator_;
+		temp.denominator_ = denominator_;
 		return temp;
 	}
 	Fraction& operator --()
@@ -69,8 +70,9 @@ public:
 	}
 	Fraction& operator --(int value)
 	{
-		Fraction temp(*this);
-		temp=--(*this);
+		Fraction temp=*this;
+		temp.numerator_ = numerator_ - denominator_;
+		temp.denominator_ = denominator_;
 		return temp;
 	}
 	int greatest_common_divisor(int numerator, int denominator)

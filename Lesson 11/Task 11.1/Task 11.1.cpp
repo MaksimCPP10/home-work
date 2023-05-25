@@ -15,6 +15,6 @@ int main()
     std::cin >> name;
 
     Greeter User;
-    User.greet(name);
+    std::cout<<User.greet(name);
 
 }

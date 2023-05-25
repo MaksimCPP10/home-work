@@ -58,8 +58,8 @@ public:
 	Fraction& operator ++(int value)
 	{
 		Fraction temp=*this;
-		temp.numerator_ = numerator_ + denominator_;
-		temp.denominator_ = denominator_;
+		numerator_ = numerator_ + denominator_;
+		denominator_ = denominator_;
 		return temp;
 	}
 	Fraction& operator --()
@@ -71,8 +71,8 @@ public:
 	Fraction& operator --(int value)
 	{
 		Fraction temp=*this;
-		temp.numerator_ = numerator_ - denominator_;
-		temp.denominator_ = denominator_;
+		numerator_ = numerator_ - denominator_;
+		denominator_ = denominator_;
 		return temp;
 	}
 	int greatest_common_divisor(int numerator, int denominator)
@@ -128,14 +128,14 @@ int main()
 
 	std::cout << "\n\n++"; fr1.Print(); std::cout << " * "; fr2.Print(); std::cout << " = "; 
  
-	fr1 = ++fr1;
+	++fr1;
 	Mult = fr1 * fr2; Mult.Print();
 	
 	std::cout << "\n\nЗначение дроби \"1\" = "; fr1.Print();
 
 	std::cout << "\n\n"; fr1.Print(); std::cout << "-- * "; fr2.Print(); std::cout << " = ";
 
-	fr1 = fr1--;
+	fr1--;
 	Mult = fr1 * fr2; Mult.Print();
 
 	std::cout << "\n\nЗначение дроби \"1\" = "; fr1.Print(); std::cout << "\n\n";

@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <Windows.h>
-#include "Greeter.h"
+#include "../StaticLIB/Greeter.h"
 
 int main()
 {

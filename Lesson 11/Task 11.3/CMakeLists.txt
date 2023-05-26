@@ -4,8 +4,10 @@ project(DynamicLIBinCMake)
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
-add_library(DynamicLIB SHARED Leaver.h Leaver.cpp)
+set(DynamicLIB.dll Leaver.h Leaver.cpp)
+
+add_library(DynamicLIB SHARED ${DynamicLIB.dll})
 
 add_executable(DynamicLIBinCMake DynamicLIBinCMake.cpp)
 
-target_link_libraries(DynamicLIBinCMake DynamicLIB)
+target_link_libraries(DynamicLIBinCMake PUBLIC DynamicLIB)

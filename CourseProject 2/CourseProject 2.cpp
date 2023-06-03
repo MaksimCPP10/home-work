@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "../Transport_vehicles/Vehicles.h"
 
 enum vehicles
 {
@@ -48,13 +49,13 @@ int main()
         switch (choice)
         {
         case 1:
-            std::cout << "\nГонка для наземного транспорта. Расстояние: " << distance << " метров.\n";
+            std::cout << "\nГонка для наземного транспорта. Расстояние: " << distance << ".\n";
             break;
         case 2:
-            std::cout << "\nГонка для воздушного транспорта. Расстояние: " << distance << " метров.\n";
+            std::cout << "\nГонка для воздушного транспорта. Расстояние: " << distance << ".\n";
             break;
         case 3:
-            std::cout << "\nГонка для наземного и воздушного транспорта. Расстояние: " << distance << " метров.\n";
+            std::cout << "\nГонка для наземного и воздушного транспорта. Расстояние: " << distance << ".\n";
             break;
         }
         
@@ -66,7 +67,9 @@ int main()
             std::cout << "6. Ковёр-самолёт.\n";
             std::cout << "7. Метла.\n";
             std::cout << "0. Закончить регистрацию.\n";
-         do
+        /*
+        // продумать реализацию обработки исключения попытки зарегистрировать неправильный тип транспортного средства
+            do
          {
             std::cout << "\nВыберите транспорт или нажмите \"0\" для окончания регистрации: ";
 
@@ -76,30 +79,37 @@ int main()
                 std::cout << "\a\nПопытка зарегистрировать неправильный тип транспортного средства!\n";
             }
          } while ((choice == 1 && choice_vehicle > 4) || (choice == 2 && choice_vehicle < 5)  && (choice_vehicle!=0));
-
+         */
         vehicles vehicle = static_cast<vehicles>(choice_vehicle);
 
         switch (vehicle)
         {
         case vehicles::Boots_all_terrain:
+            //завести экземпляр класса Boots_all_terrain с параметром(distance)
             std::cout << "\nБотинки-вездеходы успешно зарегистрирован!\n";
             break;
         case vehicles::Camel:
+            //завести экземпляр класса Camel с параметром(distance)
             std::cout << "\nВерблюд успешно зарегистрирован!\n";
             break;
         case vehicles::Centaur:
+            //завести экземпляр класса Centaur с параметром(distance)
             std::cout << "\nКентавр успешно зарегистрирован!\n";
             break;
         case vehicles::Camel_fast:
+            //завести экземпляр класса Camel_fast с параметром(distance)
             std::cout << "\nВерблюд-быстроход успешно зарегистрирован!\n";
             break;
         case vehicles::Eagle:
+            //завести экземпляр класса Eagle с параметром(distance)
             std::cout << "\nОрёл успешно зарегистрирован!\n";
             break;
         case vehicles::Magic_сarpet:
+            //завести экземпляр класса Magic_сarpet с параметром(distance)
             std::cout << "\nКовёр-самолёт успешно зарегистрирован!\n";
             break;
         case vehicles::Broom:
+            //завести экземпляр класса Broom с параметром(distance)
             std::cout << "\nМетла успешно зарегистрирован!\n";
             break;
         }

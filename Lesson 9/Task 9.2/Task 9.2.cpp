@@ -55,7 +55,7 @@ public:
 		denominator_ = denominator_;
 		return *this;
 	}
-	Fraction& operator ++(int value)
+	Fraction operator ++(int value)
 	{
 		Fraction temp=*this;
 		numerator_ = numerator_ + denominator_;
@@ -68,7 +68,7 @@ public:
 		denominator_ = denominator_;
 		return *this;
 	}
-	Fraction& operator --(int value)
+	Fraction operator --(int value)
 	{
 		Fraction temp=*this;
 		numerator_ = numerator_ - denominator_;
